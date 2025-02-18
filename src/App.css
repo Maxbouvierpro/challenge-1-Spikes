@@ -44,25 +44,42 @@ main {
 /*           Cards               */
 /* ----------------------------- */
 .card {
-  border-radius: 12px;
-  border: 1px solid #4D3184;
   background: #0C0024;
-  box-shadow: 0px -4px 44px 0px rgba(69, 52, 105, 0.10) inset;
   display: flex;
   width: 100%;
-  min-width: 287px;
-  height: fit-content;
+  min-width: 239px;
   padding: 16px 24px;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
   height: 100%;
   max-height: 160px;
+  box-shadow: 0px -4px 44px 0px rgba(69, 52, 105, 0.10) inset;
+  position: relative;
 }
 
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px; 
+  background:linear-gradient(180deg,#4C3182,#11032C); 
+  mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask-composite: exclude; 
+}
+
+
 .partie-inf p {
-  color: white;
   text-align: start;
+  color: #F7F6F9;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
 }
 
 .partie-right {
@@ -72,12 +89,21 @@ main {
 }
 
 .partie-right div {
-  color: white;
+  color: #FFF;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
 }
 
 .partie-right span {
   color: #807FBC;
-}
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 160% */}
 
 .partie-left img {
   height: 32px;
@@ -122,7 +148,8 @@ main {
   flex-direction: column;
   overflow: hidden;
   justify-content: center;
-  gap: 16px;
+  gap: 60px;
+ background: linear-gradient(transparent, black, transparent);
 }
 
 .wrapper.wrapper-bottom {

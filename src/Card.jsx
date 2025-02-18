@@ -15,7 +15,6 @@ const Card = ({ imgsrc, name, comment, at }) => {
       <div className="partie-inf">      
         <p>{comment}</p>
       </div>
-
     </div>
   );
 };
